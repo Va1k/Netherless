@@ -7,8 +7,6 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.vehicle.VehicleMoveEvent;
 import org.bukkit.block.Block;
 
-import java.util.logging.Logger;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Andreas
@@ -16,8 +14,6 @@ import java.util.logging.Logger;
  * Time: 11:45 PM
  */
 public final class Netherless extends JavaPlugin {
-
-    private final Logger log = Logger.getLogger("Minecraft.Nethrar");
 
     public Netherless() { }
 
