@@ -14,20 +14,17 @@ import org.bukkit.block.Block;
  * Time: 11:45 PM
  */
 public final class Netherless extends JavaPlugin {
+        @EventHandler
+        public void main (VehicleMoveEvent event) {
+            Block b;
+            Vehicle vehicle = event.getVehicle();
 
-    public Netherless() { }
+            b = vehicle.getLocation().getBlock();
 
-    @EventHandler
-    public void onVehicleMove(VehicleMoveEvent event) {
-        Block b;
-        Vehicle vehicle = event.getVehicle();
-
-        b = vehicle.getLocation().getBlock();
-
-        if (b.getType().equals(Material.PORTAL)) {
-            //A portal!
-            vehicle.remove();
+            if (b.getType().equals(Material.PORTAL)) {
+                //A portal!
+                vehicle.eject();
+                vehicle.remove();
+            }
         }
-    }
-
 }
